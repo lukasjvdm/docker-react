@@ -13,15 +13,15 @@
           - run: docker build -t lukasjvdm/docker-react -f ./Dockerfile.dev ./
           - run: docker run -e CI=true lukasjvdm/docker-react npm test
      
-          - run: docker build -t lukasjvdm/multi-client-10-14 ./
-          - run: docker build -t lukasjvdm/multi-nginx-10-14 ./nginx
-          - run: docker build -t lukasjvdm/multi-server-10-14 ./server
-          - run: docker build -t lukasjvdm/multi-worker-10-14 ./worker
+          # - run: docker build -t lukasjvdm/multi-client-10-14 ./client
+          # - run: docker build -t lukasjvdm/multi-nginx-10-14 ./nginx
+          # - run: docker build -t lukasjvdm/multi-server-10-14 ./server
+          # - run: docker build -t lukasjvdm/multi-worker-10-14 ./worker
      
-          - run: docker push lukasjvdm/multi-client-10-14
-          - run: docker push lukasjvdm/multi-nginx-10-14
-          - run: docker push lukasjvdm/multi-server-10-14
-          - run: docker push lukasjvdm/multi-worker-10-14
+          # - run: docker push lukasjvdm/multi-client-10-14
+          # - run: docker push lukasjvdm/multi-nginx-10-14
+          # - run: docker push lukasjvdm/multi-server-10-14
+          # - run: docker push lukasjvdm/multi-worker-10-14
      
           - name: Generate deployment package
             run: zip -r deploy.zip . -x '*.git*'
