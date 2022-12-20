@@ -13,7 +13,7 @@
           - run: docker build -t lukasjvdm/docker-react -f ./Dockerfile.dev ./
           - run: docker run -e CI=true lukasjvdm/docker-react npm test
      
-          - run: docker build -t lukasjvdm/multi-client-10-14 ./client
+          - run: docker build -t lukasjvdm/multi-client-10-14 ./
           - run: docker build -t lukasjvdm/multi-nginx-10-14 ./nginx
           - run: docker build -t lukasjvdm/multi-server-10-14 ./server
           - run: docker build -t lukasjvdm/multi-worker-10-14 ./worker
